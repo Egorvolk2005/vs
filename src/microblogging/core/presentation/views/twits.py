@@ -39,7 +39,7 @@ def add_twits_controller(request: HttpRequest) -> HttpResponse:
             )
             twit = add_twits(data=data, profile=request.user)
             return redirect(to="view_twit", twit_id=twit.id)
-  
+
         else:
             form = form_twits
 
@@ -112,7 +112,7 @@ def create_answer_to_twit_controller(
             form = form_answer
 
     context = {"title": "Create answer", "form": form}
-    return render(request=request, template_name="twits_add.html", context=context)
+    return render(request=request, template_name="twits_answer.html", context=context)
 
 
 @login_required()
@@ -149,4 +149,4 @@ def edit_twit_controller(request: HttpRequest, twit_id: int) -> HttpResponse:
             return redirect(to="view_twit", twit_id=twit_id)
 
     context = {"title": "Edit twit", "form": form}
-    return render(request=request, template_name="twits_add.html", context=context)
+    return render(request=request, template_name="twits_edit.html", context=context)

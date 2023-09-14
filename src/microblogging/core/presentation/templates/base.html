@@ -7,7 +7,7 @@
   <style> 
     body { 
       font-family: Arial, sans-serif;
-      
+      background-image: url('https://avatars.mds.yandex.net/i?id=592eff508200f71535b8d77df189e43030f62661-8819379-images-thumbs&n=13'); 
     } 
 
     h1 { 
@@ -72,7 +72,9 @@
   <nav> 
     <div class="nav-container"> 
       <div class="nav-group-1"> 
-        <a href='{% url "index" %}'><i class="fa fa-home"></i>Home</a> 
+        <a href='{% url "index" %}'><i class="fa fa-home"></i>Home</a>
+
+        <a href='{% url "add_twit" %}'><i class="fa fa-pencil"></i>Create tweet</a> 
         <a href=''><i class="fa  fa-globe"></i>Trending in your country</a> 
         <a href=''><i class="fa fa-hashtag"></i>Tags</a> 
         <a href=''><i class="fa fa-bell"></i>Notifications</a> 

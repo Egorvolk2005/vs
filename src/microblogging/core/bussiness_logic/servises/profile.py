@@ -64,3 +64,8 @@ def remove_follow(user: Profiles, user_following: str) -> None:
 
     user.followers.remove(user_following_db)
     return None
+
+
+def get_profile_in_follow(profile: Profiles, profile_follow: Profiles) -> bool:
+    follow: bool = profile.followers.filter(pk=profile_follow.pk).exists()
+    return follow

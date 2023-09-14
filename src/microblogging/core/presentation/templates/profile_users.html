@@ -16,7 +16,7 @@
     <a href='{% url "following" profile.username %}'>Following: {{ profile.count_following }}</a>
 </p>
 <br><br>
-{% if not profile in user.followers.all %}
+{% if not follow %}
     <a href='{% url "follow" profile.username %}?operation=add'>Follow</a>
 {% else %}
     <a href='{% url "follow" profile.username %}?operation=remove'>Unfollow</a>

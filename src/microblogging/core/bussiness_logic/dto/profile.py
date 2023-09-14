@@ -1,18 +1,17 @@
-from dataclasses import dataclass
-from datetime import datetime
-
-from django.core.files.uploadedfile import InMemoryUploadedFile
-
-
-@dataclass
-class ProfileDTO:
-    username: str | None
-    first_name: str | None
-    last_name: str | None
-    password: str | None
-    email: str | None
-    country: str | None
-    photo: InMemoryUploadedFile | None
-    description: str | None
-    date_of_birth: str | None
-    date_joined: datetime | None
+from dataclasses import dataclass 
+from typing import Optional, Union
+from datetime import datetime 
+from django.core.files.uploadedfile import InMemoryUploadedFile 
+ 
+@dataclass 
+class ProfileDTO: 
+    username: Optional[str]
+    first_name: Optional[str]
+    last_name: Optional[str]
+    password: Optional[str]
+    email: Optional[str]
+    country: Optional[str]
+    photo: Optional[InMemoryUploadedFile]
+    description: Optional[str]
+    date_of_birth: Optional[str]
+    date_joined: Optional[datetime]
